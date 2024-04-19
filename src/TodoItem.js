@@ -11,8 +11,12 @@ class TodoItem extends React.Component{
     render(){
         return(
             <div className="todo_item">
-                <p>{this.props.index}. {this.props.name}</p>
-                <button className="item_botton" onClick={this.handleDelete}>Завершить</button>
+                <div className="todo_item_tittle">
+                    <p>{this.props.index}. {this.props.name}</p>
+                </div>
+                <button className="button_item" onClick={this.handleDelete}>
+                    <span>Завершить</span>
+                </button>
             </div>
         )
     }

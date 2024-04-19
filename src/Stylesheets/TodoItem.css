@@ -1,10 +1,68 @@
-.todo_item{
+.todo_item {
     display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.todo_item_tittle {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 3px 25px;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+}
+
+.button_item {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(to right, #c49494, #c55c5c);
+    overflow: hidden;
+    color: #ffffff;
+    padding: 3px 25px;
+  }
+  
+  .button_item span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.item_botton{
-    width: 100px;
-    height: 30px;
-}
+    padding: 0.8em 1.2em 0.8em 1.05em;
+  }
+  
+  .button_item::before,
+  .button_item::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .button_item::before {
+    content: "";
+    background: #000000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  
+  .button_item:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  .button_item:active {
+    transform: scale(0.95);
+  }
