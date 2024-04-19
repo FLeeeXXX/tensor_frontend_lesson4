@@ -1,0 +1,10 @@
+.todo_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.item_botton{
+    width: 100px;
+    height: 30px;
+}

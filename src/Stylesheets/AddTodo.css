@@ -1,0 +1,7 @@
+.todo_add{
+    display: flex;
+    gap: 10px;
+}
+.error {
+    border: 1px solid red;
+}
