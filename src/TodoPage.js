@@ -2,6 +2,9 @@ import React from "react";
 import './Stylesheets/TodoPage.css'
 import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
+import robo from "./animations/robo.json"
+import angry from "./animations/angry.json"
+import Lottie from "lottie-react";
 
 class TodoPage extends React.Component {
     constructor(props) {
@@ -30,6 +33,10 @@ class TodoPage extends React.Component {
 
     render() {
         return (
+            <div className="main">
+                <div className="angry">
+                    <Lottie animationData={angry}/>
+                </div>
             <div className="todo_block">
                 <div>
                     <h1>Добавление задачи</h1>
@@ -39,7 +46,12 @@ class TodoPage extends React.Component {
                     <h1>Задачи</h1>
                     <TodoList tasks={this.state.tasks} onDelete={this.deleteTask} />
                 </div>
+                
             </div>
+            <div className="robo">
+                    <Lottie animationData={robo}/>
+                </div>
+        </div>
         )
     }
 }

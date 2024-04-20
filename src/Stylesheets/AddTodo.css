@@ -24,7 +24,7 @@
 }
 
 .todo_add input::placeholder {
-    color: #838181;
+    color: black;
 }
 
 .error-message {
